@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Ax Converter</title>
+  <link rel="stylesheet" type="text/css" href="main.css">
+</head>
+<body>
+  <div class="navbar">
+    <h1 style="font-size: 35px; ">Ax Converter</h1>
+    <div class="section">
+        <label for="fromLanguage">From:</label>
+        <select id="fromLanguage">
+          <option value="javascript">JavaScript</option>
+          <option value="java">Java</option>
+          <option value="python">Python</option>
+          <option value="typescript">TypeScript</option>
+          <option value="php">PHP</option>
+          <option value="cpp">C++</option>
+          <option value="chash">C#</option>
+          <option value="clanguage">C</option>
+        </select>
+      </div>
+      <div class="section">
+        <label for="toLanguage">To:</label>
+        <select id="toLanguage">
+          <option value="java">Java</option>
+          <option value="javascript">JavaScript</option>
+          <option value="python">Python</option>
+          <option value="typescript">TypeScript</option>
+          <option value="php">PHP</option>
+          <option value="cpp">C++</option>
+          <option value="chash">C#</option>
+          <option value="clanguage">C</option>
+        </select>
+      </div>
+    <button id="convertButton">Convert</button>
+    <button id="debugButton">Debug</button>
+    <button id="checkButton">Check Quality</button>
+  </div>
+  <div class="container">
+   
+    <div class="section-left">
+      <label for="input">Input Code:</label>
+      <textarea id="input" placeholder="Write your code here..." rows="10"></textarea>
+    </div>
+    <div class="section-right">
+      
+     <div id="d" style="display: flex; justify-content: space-between;">
+      <label for="output">Output: </label>
+      <button id="copyButton">Copy</button>
+     </div>
+   
+      <textarea id="output" placeholder="Your output will generate here..." rows="10" readonly>
+      </textarea>
+    </div>
+  </div>
+
+  <script src="./main.js"></script>
+</body>
+</html>

@@ -1,0 +1,239 @@
+/* Reset default styles */
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Source Code Pro', monospace;
+  }
+  
+  /* Style the navbar */
+  .navbar {
+    background-color: #333;
+    color: #fff;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 10vh;
+    padding: 0px 30px;
+  }
+  
+  .navbar h1 {
+    font-size: 20px;
+  }
+  
+  .navbar select,
+  .navbar button {
+    padding: 8px;
+    border-radius: 4px;
+    border: none;
+    background-color: #555;
+    color: #fff;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 17px;
+  }
+  
+  /* Style the container */
+  .container {
+    display: flex;
+    height: 90vh; /* Subtract navbar height */
+    /* border: 2px solid red; */
+    padding-bottom: 20px;
+    background-color: #272727;
+    padding: 0 30px 30px 30px;
+  }
+  
+  /* Style the left section */
+  .section-left {
+    flex: 1;
+    padding: 20px;
+    background-color: #272727;
+    height: 100%;
+  }
+  label{
+    font-size: 17px;
+  }
+  .section-left label,
+  .section-left textarea {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 19px;
+    color: white;
+  }
+  
+  .section-left textarea {
+    width: 100%;
+    resize: vertical;
+    height: 100%;
+    padding: 20px;
+    font-size: 18px;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Style the right section */
+  .section-right {
+    flex: 1;
+    padding: 20px;
+    /* background-color: #fff; */
+    background-color: #272727;
+  position: relative;
+  }
+  
+  .section-right label,
+  .section-right textarea {
+    display: block;
+    margin-bottom: 10px;
+    font-size: 19px;
+    color: white;
+  }
+  
+  .section-right textarea {
+    width: 100%;
+    resize: vertical;
+    font-size: 18px;
+    padding: 20px;
+    background-color: #333;
+    color: white;
+  }
+  
+  /* Style the convert button */
+  button {
+    display: block;
+    /* margin-top: 10px; */
+    padding: 10px 20px;
+    /* background-color: #333; */
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
+  #convertButton:hover {
+    background-color: #555;
+  }
+  
+  /* Style the output textarea */
+  #output {
+    width: 100%;
+    height: 100%;
+    resize: none;
+  }
+  
+  /* Responsive styles */
+  @media screen and (max-width: 600px) {
+    .container {
+      flex-direction: column;
+      height: auto;
+    }
+  
+    .section-left,
+    .section-right {
+      padding: 10px;
+    }
+  }
+  
+
+  #copyButton{
+    padding: 0 10px;
+    background-color: #555;
+    color: #fff;
+  }
+  #copyButton:hover{
+    background-color: rgb(58, 58, 58);
+    cursor: pointer;
+  }
+
+  #convertButton{
+    display: inline-block;
+    background-color: rgb(0, 190, 73);
+    padding: 10px 20px;
+    position: relative;
+    transition: padding-right .3s ease-out;
+  }
+  #debugButton{
+    display: inline-block;
+    background-color: rgb(255, 57, 57);
+    padding: 10px 20px;
+     position: relative;
+     transition: padding-right .3s ease-out;
+
+  }
+  #checkButton{
+    display: inline-block;
+    background-color: rgb(49, 73, 255);
+    padding: 10px 20px;
+    position: relative;
+
+    transition: padding-right .3s ease-out;
+  }
+
+
+
+  #convertButton:hover{
+    background-color: rgb(0, 149, 0);
+    cursor: pointer;
+  }
+  #debugButton:hover{
+    background-color: red;
+    cursor: pointer;
+  }
+  #checkButton:hover{
+    background-color: blue;
+    cursor: pointer;
+  }
+
+  #loader {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid #34db58;
+    border-radius: 50%;
+    width: 120px;
+    height: 120px;
+    animation: spin 2s linear infinite;
+    margin: 50px auto;
+    overflow: visible;
+    margin-top: 100px;
+  }
+  
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
+  /* Hide the content initially */
+  #loader {
+    display:none;
+  }
+  
+
+  .loading {
+    background-color: #CCC;
+    padding-right: 40px;
+}
+.loading:after {
+    content: "";
+    position: absolute;
+    border-radius: 100%;
+    right: 6px;
+    top: 50%;
+    width: 0px;
+    height: 0px;
+    margin-top: -2px;
+    border: 2px solid rgba(255,255,255,0.5);
+    border-left-color: #FFF;
+    border-top-color: #FFF;
+    animation: spin .6s infinite linear, grow .3s forwards ease-out;
+}
+@keyframes spin { 
+    to {
+        transform: rotate(359deg);
+    }
+}
+@keyframes grow { 
+    to {
+        width: 14px;
+        height: 14px;
+        margin-top: -8px;
+        right: 13px;
+    }
+}
